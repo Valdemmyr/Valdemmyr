@@ -1,0 +1,31 @@
+#Este código pede 3 notas de um aluno, calcula a media
+#e mostra na tela o boletim (Média e nome do aluno) e se o mesmo está aprovado ou não
+soma1 = 0
+nota = 0
+count = 0
+nome = str(input("entre com o nome do aluno: "))
+while count < 3:
+    nota = float(input("Entre com a nota do aluno"))
+    if nota < 0:
+        print("Esta nota é inválida. tente outra vez!")
+        nota = float(input("Entre com a nota do aluno"))
+        soma = soma1 + nota
+        soma1 = soma
+    else:
+        soma = soma1 + nota
+        soma1 = soma
+    count += 1
+media = soma/3
+print ("==="*12)
+print("========BOLETIM DE NOTA=========")
+if media >= 7:
+    situacao = "APROVADO"
+else:
+   situacao = "REPROVADO"
+print(f"A média do aluno {nome} é {round(media,2)} e o mesmo está {situacao}")
+print ("==="*12)
+
+<!---
+Valdemmyr/Valdemmyr is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
